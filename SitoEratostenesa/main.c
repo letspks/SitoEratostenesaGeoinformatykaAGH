@@ -4,27 +4,32 @@
 
 int main()
 {
-    int n;
+    int n;                                                                                   //deklarowanie typow zmiennych
     int i;
     int j;
     int q;
 
-    printf("Algorytm wypisujacy liczby pierwsze mniejsze od N metoda sita Eratostenesa\n");
-    FILE *plik = fopen("nte.txt", "r");
+    printf("Algorytm wypisujacy liczby pierwsze mniejsze od N metoda sita Eratostenesa\n");  //wypisywanie inforamcji zwrotnych do uzytkownika
+    FILE *plik = fopen("nte.txt", "r");                                                      //otwarcie wskazanego pliku
     printf("Plik powinien zawierac 10 zmiennych\n");
     if(plik==NULL)
     {
-        perror("NIE MOZNA ZLOKALIZOWAC PLIKU NTE\n");
+        perror("NIE MOZNA ZLOKALIZOWAC PLIKU NTE\n");                                        //sprawdzenie czy plik zostal pomyslnie znaleziony
         exit(0);
     }
     printf("Plik otwarty pomyslnie\n");
     int tabx[10];
+    int x=0;
 
-
-    for(int k=0; k<10; k=k+1)
+   while(feof(plik) == 0)
+   {
+      fscanf(plik,"%d",&tabx[x]);                                                           //pobieranie danych z pliku do tabeli tabx
+      x=x+1;
+   }
+    for(int k=0; k<10; k=k+1)                                                               //wejscie do petli wykonujacej obliczenia dla kazdego N z osobna
     {
         n=tabx[k];
-        printf("Obliczanie dla liczby:");
+        printf("Obliczanie dla liczby: ");
         printf("%d", n);
 
         int liczby[n];
