@@ -18,7 +18,8 @@ int main()
         exit(0);                                                                             //stopowanie petli i jednoczesnie zakonczenie programu
     }
     printf("Plik otwarty pomyslnie\n");                                                      //informacja zwrotna o znalezieniu pliku
-    int tabx[10];                                                                            //utworzenie tablicy pomoczniczej tabx, do ktÃ³rej zapisane zostana liczby z pliku
+    printf("\n");
+    int tabx[10];                                                                            //utworzenie tablicy pomoczniczej tabx, do której zapisane zostana liczby z pliku
     int x=0;                                                                                 // ustawienie indeksu x na 0
 
    while(feof(plik) == 0)
@@ -31,7 +32,6 @@ int main()
         n=tabx[k];                                                                          //pobieranie liczby n z odpowiedniego pola tabx[k]
         printf("Obliczanie dla liczby: ");                                                  //informacja jaka liczbe pobrano
         printf("%d", n);
-        printf("\n");
         int liczby[n];                                                                      //utworzenie tablicy liczby[n]
         int liczbygotowe[n];                                                                //utworzenie tablicy pomocniczej liczbygotowe[n]
 
@@ -58,7 +58,6 @@ int main()
                 printf("%d", liczbygotowe[i]);                                              //wypisanie konkretnej liczby pod i'tym indeksem jako liczby pierwszej
                 printf("\n");
             }
-
         }
         printf("\n");
     }
